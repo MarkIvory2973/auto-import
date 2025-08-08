@@ -1,0 +1,7 @@
+version: "3.8"
+
+services:
+  server_backend:
+    build: src/server/backend
+    ports:
+      - "8080:8080/tcp"
