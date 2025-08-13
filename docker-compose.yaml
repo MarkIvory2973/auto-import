@@ -1,5 +1,6 @@
 services:
   server_backend:
+    restart: unless-stopped
     build: src/server/backend
     ports:
       - "8080:8080/tcp"
