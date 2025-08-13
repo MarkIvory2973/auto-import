@@ -13,6 +13,7 @@ def root_xfltd():
         xfltd.login(email, password)
         
         subUrl = xfltd.copy()
+        print(subUrl)
     
     return redirect(subUrl)
 

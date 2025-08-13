@@ -2,7 +2,7 @@ from .base import *
 
 class XFLTD(Provider):
     def __init__(self):
-        permissions = ["clipboard-read"]
+        permissions = [ "clipboard-read" ]
         url = "https://my.xfltd.org/#/login"
         super().__init__(permissions, url)
         
