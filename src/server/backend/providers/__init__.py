@@ -1,1 +1,3 @@
 from playwright.sync_api import sync_playwright
+from browserforge.fingerprints import FingerprintGenerator
+from browserforge.injectors.playwright import NewContext

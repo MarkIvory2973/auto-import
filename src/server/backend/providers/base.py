@@ -8,7 +8,8 @@ class Provider:
     def __enter__(self):
         self.playwright = sync_playwright().start()
         self.browser = self.playwright.chromium.launch()
-        self.context = self.browser.new_context(permissions=self.permissions)
+        self.fingerprint = FingerprintGenerator().generate()
+        self.context = NewContext(self.browser, self.fingerprint, permissions=self.permissions)
         self.page = self.context.new_page()
         
         self.page.goto(self.url)
